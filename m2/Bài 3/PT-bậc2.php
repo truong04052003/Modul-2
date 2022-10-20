@@ -35,24 +35,25 @@ if ( $_SERVER['REQUEST_METHOD']== 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-   <form method="post">
-   <label for="">Nhập số thứ nhất</label> <br>
-   <input type="text" id="" name="nhapsothunhat"><br><br>
-   <label for="">Nhập số thứ hai</label><br>
-   <input type="text" id="" name="nhapsothuhai"><br><br>
-   <label for="">Nhập số thứ ba</label><br>
-   <input type="text" id="" name="nhapsothuba"><br><br>
-   <input type="submit" value="Submit">
+    <form method="post">
+        <label for="">Nhập số thứ nhất</label> <br>
+        <input type="text" id="" name="nhapsothunhat"><br><br>
+        <label for="">Nhập số thứ hai</label><br>
+        <input type="text" id="" name="nhapsothuhai"><br><br>
+        <label for="">Nhập số thứ ba</label><br>
+        <input type="text" id="" name="nhapsothuba"><br><br>
+        <input type="submit" value="Submit">
 
-   </form>
+    </form>
 </body>
+
 </html>
-
-
