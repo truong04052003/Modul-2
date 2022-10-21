@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
- 
-</head>
+$songuyen = [1,3,6,4,8,7,9,5];
+//           0 1 2 3 4 5 6 7
 
-<body>
-    <form method="post">
-        <div name="input">
-            <h2>Nhập độ dài của mảng </h2><br>
-            <h4>nhập độ dài mảng 1:</h4>
-            <input type="text" name="length">
-            <h4>nhập phần tử cần xóa</h4>
-            <input type="text" name="num">
-        </div><br><br>
-        <div>
-            <input type="submit" name="print" value="Enter">
-        </div>
-  
-</body>
+$index = 6;
+$somuonxoa = 9;
+for ($i = 0 ;  $i   < count($songuyen) ;  $i++ )  { 
+  if($songuyen[$i] == $somuonxoa){
+    $somuonxoa = $i;
+  }
+}
+unset($songuyen[$somuonxoa]);
 
-</html>
+echo '<pre>';
+print_r($songuyen);
+echo '</pre>';
+
+echo "$somuonxoa : là phần tử muốn xóa khỏi mảng " ."<br>"; 
+echo "vị trí" ." $index : là vị trí muốn xóa trong mảng";
+
+
+
+
+
+?>
