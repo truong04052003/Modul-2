@@ -12,10 +12,12 @@ class Shape {
     public $side1 = 0;
     public $side2 = 0;
     public $side3 = 0;
-    public function __construct($ts_side1, $ts_side2, $ts_side3 ){
+    public $mau ;
+    public function __construct($ts_side1, $ts_side2, $ts_side3 ,$ts_mau  ){
         $this->side1 = $ts_side1;
         $this->side2 = $ts_side2;
         $this->side3 = $ts_side3;
+        $this->mau = $ts_mau;
     }
     public function setSide1($nhapa){
         $this->side1 = $nhapa;
@@ -35,19 +37,23 @@ class Shape {
     public function getSide3(){
         return $this->side3;
     }
+    public function getColor(){
+        return $this->mau;
+    }
     public function getPerimeter(){
         return $this->side1+$this->side2+$this->side3;
     }
     public function __toString(){
         return 'tôi là tam giác';
     }
+    
 
 }
   
   class Triangle extends Shape{
     public $mau;
     public function __construct($ts_side1, $ts_side2, $ts_side3,$mau ){
-        parent::__construct($ts_side1, $ts_side2,$ts_side3);
+        parent::__construct($ts_side1, $ts_side2,$ts_side3 ,$mau);
         $this->mau = $mau;
     }
     public function getArea(){
@@ -59,6 +65,9 @@ class Shape {
       echo "Chu vi tam giác là ".$triangle->getPerimeter();
       echo  '<br>';
       echo $triangle->getArea();
+      echo  '<br>';
+      echo "Màu ".$triangle->getColor();
+      
 }
   
 
