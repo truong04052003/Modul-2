@@ -79,3 +79,4 @@ echo $objarraylist->size();
 echo '<pre>';
 print_r($objarraylist);
 echo '</pre>';
+?>

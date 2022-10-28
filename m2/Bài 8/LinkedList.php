@@ -1,32 +1,42 @@
 <?php
 
+class Node
+{
+    public $data = '';
+    public $next = null;
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
+}
 class LinkedList
 {
-
-    public $firstNode;
-    public $lastNode;
-    public function __construct()
+    public $head = null;
+    public function addFirst($item)
     {
-        $this->firstNode = null;
-        $this->lastNode = null;
-    }
-    public function insertFirstNode($data)
-    {
-        $node = new Node($data);
-        $node->link = $this->firstNode;
-        $this->firstNode = $node;
-
-        if (!$this->lastNode) {
-            $this->lastNode = $node;
-        }
-    }
-    public function insertLastNode($data)
-    {
-        $node = new Node($data);
-        if (!$this->firstNode) {
-            $this->insertFirstNode($data);
+        $node = new Node($item);
+        //thêm vào đầu
+        if ($this->head == null) {
+            $this->head = $node;
         } else {
-            $this->lastNode = $node;
+            // $this->head->next = $node;
+            $currentNode = $this->head;
+            while ($currentNode->next != null) {
+                $currentNode = $currentNode->next;
+            }
+            $currentNode->next = $node;
         }
     }
 }
+//khởi tạo
+$objLinkedList = new LinkedList();
+$objLinkedList->addFirst('Toàn');
+$objLinkedList->addFirst('Trường');
+$objLinkedList->addFirst('Ngọc');
+$objLinkedList->addFirst('11');
+
+//in
+echo '<pre>';
+print_r($objLinkedList);
+echo '</pre>';
+?>

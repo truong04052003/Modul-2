@@ -12,7 +12,7 @@ class Shape {
     public $side1 = 0;
     public $side2 = 0;
     public $side3 = 0;
-    public function __construct($ts_side1, $ts_side2, $ts_side3){
+    public function __construct($ts_side1, $ts_side2, $ts_side3 ){
         $this->side1 = $ts_side1;
         $this->side2 = $ts_side2;
         $this->side3 = $ts_side3;
@@ -36,7 +36,7 @@ class Shape {
         return $this->side3;
     }
     public function getPerimeter(){
-        return 'Chu vi của tam giác là :'.$this->side1+$this->side2+$this->side3;
+        return $this->side1+$this->side2+$this->side3;
     }
     public function __toString(){
         return 'tôi là tam giác';
@@ -46,21 +46,21 @@ class Shape {
   
   class Triangle extends Shape{
     public $mau;
-    public function __construct($ts_side1, $ts_side2, $ts_side3,$mau){
+    public function __construct($ts_side1, $ts_side2, $ts_side3,$mau ){
         parent::__construct($ts_side1, $ts_side2,$ts_side3);
         $this->mau = $mau;
     }
     public function getArea(){
-        // return 'Diện tích của tam giác là :'.sprt ( $this->getPerimeter()* ( $this->getPerimeter() - $side1 )*( $this->getPerimeter() - $side2)*( $this->getPerimeter() - $side3 );
+        return 'Diện tích của tam giác là :'.sqrt(( $this->getPerimeter())* ( $this->getPerimeter() - $this->side1 )*( $this->getPerimeter() - $this->side2)*( $this->getPerimeter() - $this->side3 ));
     }   
   }
   //khởi tạo đối tượng
-  $triangle = new Triangle ($ts_side1, $ts_side2, $ts_side3,$mau , $height);
-      echo $triangle->getPerimeter();
-      echo '<br>';
+  $triangle = new Triangle($nhapa, $nhapb, $nhapc, $mau);
+      echo "Chu vi tam giác là ".$triangle->getPerimeter();
+      echo  '<br>';
       echo $triangle->getArea();
-    
 }
+  
 
 ?>
 
@@ -80,9 +80,7 @@ class Shape {
         <input type="text" id="" name="ts_side2"><br><br>
         <label for="fname">Nhập side3:</label><br>
         <input type="text" id="" name="ts_side3"><br>
-        <label for="lname">Nhập mau:</label><br>
-        <input type="text" id="" name="mau"><br><br>
-        <label for="lname">Nhập chiều cao:</label><br>
+        <label for="lname">Nhập màu</label><br>
         <input type="text" id="" name="mau"><br><br>
         <input type="submit" value="Submit">
     </form>

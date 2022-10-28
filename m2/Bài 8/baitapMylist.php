@@ -1,7 +1,6 @@
 <?php
 
-class MyList
-{
+class MyList{
 
     protected $size;
     protected $elements = [];
