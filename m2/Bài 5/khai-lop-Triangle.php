@@ -64,9 +64,9 @@ class Shape {
   $triangle = new Triangle($nhapa, $nhapb, $nhapc, $mau);
       echo "Chu vi tam giác là ".$triangle->getPerimeter();
       echo  '<br>';
-      echo $triangle->getArea();
+      echo $triangle->getArea();    
       echo  '<br>';
-      echo "Màu ".$triangle->getColor();
+      echo "Màu :".$triangle->getColor();
       
 }
   
