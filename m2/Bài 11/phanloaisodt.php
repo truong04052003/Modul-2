@@ -1,38 +1,34 @@
 <?php
-if($_SERVER['REQUEST_METHOD']== 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sdt = $_POST['sdt'];
 
-$string = '0943612567,0343567891,092827262';
-$phones = explode(',', $string);
-$vinaphone      = [];
-$viettels   = [];
-$mobile      = [];
-foreach ($phones as $phone) {
-    $checkPhone = substr($phone, 0, 3);
-    //kiem tra vinaphone
-    if ($checkPhone == '094') {
-        $vinaphone[] = $phone;
+    $phones = explode(',', $sdt);
+    $vinaphone      = [];
+    $viettel   = [];
+    $mobile      = [];
+    foreach ($phones as $phone) {
+        $checkPhone = substr($phone, 0, 3);
+        //kiem tra vinaphone
+        if ($checkPhone == '094' || $checkPhone == '084' || $checkPhone == '082' || $checkPhone == '085') {
+
+            $vinaphone = $phone;
+            echo 'Đây là số vinaphone : ';
+            echo $vinaphone  ;
+            //kiem tra vietels
+        } else if ($checkPhone == '034' || $checkPhone == '032' || $checkPhone == '033' || $checkPhone == '039') {
+            $viettel = $phone;
+            echo 'Đây là số viettel :' ;
+            echo $viettel ;
+
+            //kiem tra mobiphone
+        } else if ($checkPhone == '092' || $checkPhone == '070' || $checkPhone == '079' || $checkPhone == '077') {
+            $mobile = $phone;
+            echo 'Đây là số mobile : ' ;
+            echo $mobile  ;
+        }
+
     }
-    //kiem tra vietels
-    if ($checkPhone == '034') {
-        $viettels[] = $phone;
-    }
-    //kiem tra mobiphone
-    if ($checkPhone == '092') {
-        $mobile[] = $phone;
-    }
-    var_dump($checkPhone);
-}
-echo '<pre>';
-print_r($vinaphone);
-echo 'Đây là số vinaphone';
-echo '<hr>';
-print_r($viettels);
-echo 'Đây là số viettels';
-echo '<hr>';
-print_r($mobile);
-echo 'Đây là số mobile';
-echo '</pre>';
+ 
 }
 
 ?>
@@ -49,7 +45,7 @@ echo '</pre>';
 <body>
     <form method='post'>
         <label for="">Nhập số điện thoại cần kiểm tra</label><br>
-        <input type="text" name="sdt"><br><br>
+        <input type="number" minlength="" maxlength="10" name="sdt"><br><br>
         <input type="submit" value="Submit">
 
 
