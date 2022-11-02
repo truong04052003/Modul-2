@@ -32,7 +32,7 @@ class ArrayList{
             echo 'không tồn tại phàn tử tai vị trí ' . $index ;
         }
     }
-    //trả về các phàn tử trong mảng container
+    //trả về các phần tử trong mảng container
     public function size(){
         return count($this->container);
     }

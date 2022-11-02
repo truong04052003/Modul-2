@@ -4,6 +4,7 @@ class MyList{
 
     protected $size;
     protected $elements = [];
+    public array $originElements;
     public function insert($index, $item){
         array_splice($this->elements, $index, 0, $item);
     }
@@ -20,11 +21,15 @@ class MyList{
     public function clear(){
         return $this->elements = [];
     }
-    public function addAll(){
-        foreach($this->elements as $item){
-            $this->add($item);
+    public function addAll($arr){
+        
+            if ($this->size() >= ($this->getCount() + count($arr))) {
+                $this->elements = array_merge($this->elements, $arr);
+            } else {
+                echo "Mảng bị giới hạn ";
+            }
+            return $this->elements;
         }
-    }
     public function indexOf($item){
         return array_search($item, $this->elements);
     }
@@ -54,7 +59,7 @@ $hehe->add('tran');
 $hehe->add('van');
 $hehe->add('truong');
 $hehe->add('hoang');
-$hehe->add('đang');
+$hehe->add('dang');
 $hehe->add('toan');
 
 //xóa phần tử 
@@ -78,7 +83,7 @@ echo '<br>';
 //sắp xếp 
 var_dump($hehe->sort());
 //thêm thêm các phần tử
-// $hehe->addAll($arr);    
+$hehe->addAll();    
 
 
 
