@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $checkPhone = substr($phone, 0, 3);
         //kiem tra vinaphone
         if ($checkPhone == '094' || $checkPhone == '084' || $checkPhone == '082' || $checkPhone == '085') {
-
+            
             $vinaphone = $phone;
             echo 'Đây là số vinaphone : ';
             echo $vinaphone  ;
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <form method='post'>
         <label for="">Nhập số điện thoại cần kiểm tra</label><br>
-        <input type="number" minlength="" maxlength="10" name="sdt"><br><br>
+        <input type="text" name="sdt"><br><br>
         <input type="submit" value="Submit">
 
 
