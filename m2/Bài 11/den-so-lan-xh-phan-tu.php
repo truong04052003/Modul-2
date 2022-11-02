@@ -1,16 +1,16 @@
 <?php
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $socantim = $_POST['socantim'];
 
 $numbers = [2,3,5,7,9,10,16,25];
-$find = 9;
 $count = 0;
 foreach ($numbers as $key => $value) {
-    if($value == $find) {
+    if($value == $socantim) {
         $count ++;
     }
 }
-echo "Tìm thấy số ". $find ." xuất hiện ".$count ." lần";                                                               
-
+echo "Tìm thấy số ". $socantim ." xuất hiện ".$count ." lần";                                                               
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +21,12 @@ echo "Tìm thấy số ". $find ." xuất hiện ".$count ." lần";
     <title>Document</title>
 </head>
 <body>
-    
+<form method='post'>
+        <label for="">Nhập số phần tử cần tìm</label><br>
+        <input type="text" name="socantim"><br><br>
+        <input type="submit" value="Submit">
+
+
+    </form>
 </body>
 </html>
