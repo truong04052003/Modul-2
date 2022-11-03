@@ -18,3 +18,4 @@ for ($i = 0; $i < count($A); $i++){
 echo '<pre>';
 print_r($A);
 echo '</pre>';
+?>
