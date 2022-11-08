@@ -10,14 +10,20 @@
 // print_r($arr);
 // echo '</pre>';
 
-$books = ['van','su','dia'];
-$temp = $books[0];
-$books[0] = $books[1];
-$books[1] = $temp;
+// $books = ['van','su','dia'];
+// $temp = $books[0];
+// $books[0] = $books[1];
+// $books[1] = $temp;
 
-echo '<pre>';
-print_r($books);
-echo '</pre>';
+// echo '<pre>';
+// print_r($books);
+// echo '</pre>';
 
-
+$array = array(
+    1    => "a",
+    "1"  => "b",
+    1.5  => "c",
+    true => "d",
+);
+return $array;
 ?>

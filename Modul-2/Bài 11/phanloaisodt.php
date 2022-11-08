@@ -5,30 +5,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phones = explode(',', $sdt);
     $vinaphone      = [];
     $viettel   = [];
-    $mobile      = [];
+    $mobiphone      = [];
     foreach ($phones as $phone) {
         $checkPhone = substr($phone, 0, 3);
         //kiem tra vinaphone
         if ($checkPhone == '094' || $checkPhone == '084' || $checkPhone == '082' || $checkPhone == '085') {
-            
             $vinaphone = $phone;
-            echo 'Đây là số vinaphone : ';
-            echo $vinaphone  ;
+            if (strlen($vinaphone) == 10) {
+                echo 'Đây là số vinaphone : '.$vinaphone;
+            } else {
+                echo "số  ".$vinaphone . ' không hợp lệ';
+
+            }
             //kiem tra vietels
         } else if ($checkPhone == '034' || $checkPhone == '032' || $checkPhone == '033' || $checkPhone == '039') {
             $viettel = $phone;
-            echo 'Đây là số viettel :' ;
-            echo $viettel ;
+            if (strlen($viettel) == 10) {
+                echo 'Đây là số viettel :'.$viettel;
+
+            } else {
+                echo "số  ".$viettel . ' không hợp lệ';
+            }
+           
 
             //kiem tra mobiphone
         } else if ($checkPhone == '092' || $checkPhone == '070' || $checkPhone == '079' || $checkPhone == '077') {
-            $mobile = $phone;
-            echo 'Đây là số mobile : ' ;
-            echo $mobile  ;
-        }
+            $mobiphone = $phone;
+            if (strlen($mobiphone) == 10) {
+                echo 'Đây là số vinaphone : '.$vinaphone;
+            } else {
+                echo "số  ".$mobiphone . ' không hợp lệ';
 
+            }
+        }
     }
- 
 }
 
 ?>
