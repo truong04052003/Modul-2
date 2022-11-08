@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gmail = $_REQUEST['gmail'];
 
 
-    $pattern = '/^[A-Za-z0-9]+\@[A-Za-z0-9]+\.[A-Za-z0-9]{3,3}/';
+    $pattern = '/^[A-Za-z0-9]+\@[A-Za-z0-9]+\.[A-Za-z0-9]{3,3}$/';
     if (preg_match($pattern, $gmail)) {
         echo 'Khớp';
     } else {
