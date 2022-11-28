@@ -4,7 +4,7 @@ $customerList = [
         "ten" => "Đào Thị Lương",
         "ngaysinh" => "18-02-2005",
         "diachi" => "Hải Phòng",
-        "anh" =>"img/1.jpg"
+        "anh" => "img/1.jpg"
     ],
     "2" => [
         "ten" => "Trần Ngọc Hưng",
@@ -60,8 +60,6 @@ $customerList = [
             background-color: #FFFFE0;
             cursor: pointer;
         }
-    
-
     </style>
 </head>
 

@@ -1,6 +1,7 @@
 <?php
 
-function seachMin($num){
+function seachMin($num)
+{
 
     $index = 0;
     $min = $num[0];
@@ -9,9 +10,8 @@ function seachMin($num){
             $min = $num[$i];
             $index += $i;
         }
-        
     }
-    return "Giá trị nhỏ nhất trong mảng là : ". $min . '<br>' . "nằm ở vị trí : " . $index;
+    return "Giá trị nhỏ nhất trong mảng là : " . $min . '<br>' . "nằm ở vị trí : " . $index;
 }
 $arr = [3, 7, 9, 12, 14, 15, 3, 1];
 echo seachMin($arr);

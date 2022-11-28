@@ -9,7 +9,7 @@
 <style>
     table{
         background-color :aquamarine;
-        width: 70%;
+        width: 90%;
     }
 </style>
 <body>

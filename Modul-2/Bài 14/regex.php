@@ -36,8 +36,8 @@ $arr = explode(".", $ip);
 // print_r($arr);  
 // echo "</pre>";
 
-$pattern= '/\./';
-$iparr = preg_split($pattern , $ip);
+$pattern = '/\./';
+$iparr = preg_split($pattern, $ip);
 echo "<pre>";
 print_r($iparr);
 echo "</pre>";

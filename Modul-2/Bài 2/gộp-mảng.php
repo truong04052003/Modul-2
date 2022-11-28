@@ -8,5 +8,3 @@ $monhoc3  = array_merge($monhoc1, $monhoc2);
 echo "<pre>";
 print_r($monhoc3);
 echo "</pre>";
-
-?>

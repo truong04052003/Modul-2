@@ -50,5 +50,3 @@ foreach ($info as $key => $value) {
 
 // }
 // // endforeach;
-
-?>

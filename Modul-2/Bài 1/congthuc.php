@@ -51,4 +51,3 @@ print_r($sothich);
 echo '<pre>';
 print_r($sothich);     // in mảng 
 echo '</pre>';
-?>

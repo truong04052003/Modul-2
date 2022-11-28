@@ -13,7 +13,7 @@ class MatHangController {
             // echo '<pre>';
             // print_r($_REQUEST);
             // echo '</pre>';
-            $objMatHang = new MatHang();
+            $objMatHang = new MatHang();  
             $objMatHang->store( $_REQUEST );
             header("Location: index.php?page=list");
         }

@@ -1,19 +1,33 @@
-====================MẶT HÀNG=====================
 <?php
-echo '<br>'.'<br>';
+include_once 'db.php';//$conn
 
-?>
-<?php
-include_once 'db.php';
+$controller = 'MatHang';
+if( isset( $_GET['controller'] ) && $_GET['controller'] != '' ){
+    $controller = $_GET['controller'];
+}
+
+// Gọi Controller
+switch ($controller) {
+    case 'MatHang':
+        include_once 'controllers/MatHangController.php';
+        $objController =  new MatHangController();
+        break;
+    case 'LoaiHang':
+        include_once 'controllers/LoaiHangController.php';
+        $objController =  new LoaiHangController();
+        break;
+    default:
+        # code...
+        break;
+}
+
+
+
 $page = 'list';
 if( isset( $_GET['page'] ) && $_GET['page'] != '' ){
     $page = $_GET['page'];
 }
-// Gọi Controller
-include_once 'controllers/MatHangController.php';
-include_once 'controllers/LoaihangController.php';
-
-$objController =  new MatHangController();
+// Gọi page
 switch ($page) {
     case 'list':
         $objController->list();
@@ -31,26 +45,16 @@ switch ($page) {
         $objController->list();
         break;
 }
-echo '<br>';
-$objController =  new LoaihangController();
-switch ($page) {
-    case 'loaihang/list':
-        $objController->list();
-        break;
-    case 'loaihang/add':
-        $objController->add();
-        break;
-    case 'loaihang/edit':
-        $objController->edit();
-        break;
-    case 'loaihang/delete':
-        $objController->delete();
-        break;
-    default:
-        $objController->list();
-        break;
-}
-
-?>
-
-
+/*
+   
+    MatHang
+        index.php?controller=MatHang&page=list   => Danh sach
+        index.php?controller=MatHang&page=add    => Them moi
+        index.php?controller=MatHang&page=edit   => Cap nhat
+        index.php?controller=MatHang&page=delete => Xoa
+    LoaiHang
+        index.php?controller=LoaiHang&page=list   => Danh sach
+        index.php?controller=LoaiHang&page=add    => Them moi
+        index.php?controller=LoaiHang&page=edit   => Cap nhat
+        index.php?controller=LoaiHang&page=delete => Xoa
+*/ 

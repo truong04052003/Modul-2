@@ -24,7 +24,7 @@ class LoaiHang
         global $conn;
         $TENLOAIHANG = $data['TENLOAIHANG'];
         global $conn;
-        $sql = "INSERT INTO `c10_loaihang`(`TENLOAIHANG`) VALUES ('$TENLOAIHANG'); ";
+        $sql = "INSERT INTO `c10_loaihang`(`TENLOAIHANG`) VALUES ('$TENLOAIHANG') ";
         $conn->exec($sql);
     }
     //xu ly them moi

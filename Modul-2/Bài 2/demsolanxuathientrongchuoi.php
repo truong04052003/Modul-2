@@ -1,12 +1,12 @@
 <?php
-if ( $_SERVER['REQUEST_METHOD']== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nhapmotchuoi = $_REQUEST['nhapmotchuoi'];
     $nhapchucantim = $_REQUEST['nhapchucantim'];
     $count = 0;
-    for ($i=0; $i < strlen($nhapmotchuoi); $i++) { 
-       if($nhapmotchuoi[$i] == $nhapchucantim){
-        $count++;
-       }
+    for ($i = 0; $i < strlen($nhapmotchuoi); $i++) {
+        if ($nhapmotchuoi[$i] == $nhapchucantim) {
+            $count++;
+        }
     }
     echo $count;
 }

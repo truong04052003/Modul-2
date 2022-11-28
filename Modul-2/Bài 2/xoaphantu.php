@@ -18,9 +18,3 @@ echo '</pre>';
 
 echo "$somuonxoa : là phần tử muốn xóa khỏi mảng " ."<br>"; 
 echo "vị trí" ." $index : là vị trí muốn xóa trong mảng";
-
-
-
-
-
-?>

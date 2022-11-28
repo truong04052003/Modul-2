@@ -30,9 +30,9 @@ foreach ($tu_sach as $key => $books) {
     }
 }
 //duyệt mảng bằng for
-for ($i=0; $i < count($tu_sach); $i++) { 
-    for ($j=0; $j < count($tu_sach[$i]); $j++) { 
-        echo '<br>'.$tu_sach[$i][$j];
+for ($i = 0; $i < count($tu_sach); $i++) {
+    for ($j = 0; $j < count($tu_sach[$i]); $j++) {
+        echo '<br>' . $tu_sach[$i][$j];
     }
 }
 
