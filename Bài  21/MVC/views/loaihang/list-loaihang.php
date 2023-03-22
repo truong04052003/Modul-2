@@ -10,6 +10,7 @@
     <tbody>
         <?php foreach ($rows as $row) : ?>
             <tr>
+                
                 <td><?= $row->MALOAIHANG; ?> </td>
                 <td><?= $row->TENLOAIHANG; ?></td>
                 <td>

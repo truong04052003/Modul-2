@@ -12,12 +12,6 @@ $customerList = [
         "diachi" => "Quảng Trị",
         "anh" => "img/5.jpg"
     ],
-    "3" => [
-        "ten" => "Nguyễn Anh Thư",
-        "ngaysinh" => "23-08-2006",
-        "diachi" => "Quảng Trị",
-        "anh" => "img/3.jpg"
-    ],
     "4" => [
         "ten" => "Trần Văn Trường",
         "ngaysinh" => "04-05-2003",

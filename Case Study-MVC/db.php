@@ -12,6 +12,6 @@ try {
 //   echo 'không kết nối được CSDL';
 }
 
-
+  
 
 ?>  
